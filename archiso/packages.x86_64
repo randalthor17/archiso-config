@@ -1,3 +1,4 @@
+# Base stuff
 alsa-utils
 amd-ucode
 arch-install-scripts
@@ -8,8 +9,6 @@ bind-tools
 brltty
 broadcom-wl
 btrfs-progs
-chaotic-keyring
-chaotic-mirrorlist
 clonezilla
 cloud-init
 cryptsetup
@@ -51,6 +50,7 @@ lftp
 libfido2
 libusb-compat
 linux
+linux-headers
 linux-atm
 linux-firmware
 linux-firmware-marvell
@@ -69,7 +69,6 @@ mkinitcpio-nfs-utils
 modemmanager
 mtools
 nano
-networkmanager
 nbd
 ndisc6
 nfs-utils
@@ -123,5 +122,84 @@ wpa_supplicant
 wvdial
 xfsprogs
 xl2tpd
-yay
 zsh
+
+# Chaotic-aur
+chaotic-keyring
+chaotic-mirrorlist
+
+# Audio packages
+pipewire
+pipewire-pulse
+pipewire-jack
+pipewire-alsa
+pipewire-zeroconf
+wireplumber
+pavucontrol
+
+# Network
+networkmanager
+
+# Xorg
+libva-intel-driver
+libva-mesa-driver
+libva-vdpau-driver
+xorg-server
+xorg-xinit
+xorg-xkill
+xorg-mkfontscale
+xdg-user-dirs
+xdg-utils
+numlockx
+xf86-input-elographics
+xf86-input-evdev
+xf86-input-libinput
+
+# Plasma desktop
+plasma-desktop
+plasma-workspace
+kde-gtk-config
+plasma-nm
+plasma-pa
+powerdevil
+kinfocenter
+kwin
+kgamma5
+ksshaskpass
+kwallet-pam
+sddm
+
+# KDE apps
+ark
+dolphin
+dolphin-plugins
+filelight
+kate
+kcalc
+kdeconnect
+okular
+khotkeys
+kinit
+kio-extras
+konsole
+ksystemlog
+kwalletmanager
+gwenview
+
+# Extra applications
+p7zip
+unarchiver
+firefox
+htop
+inxi
+libreoffice-fresh
+powertop
+tlp
+qbittorrent
+vlc
+neofetch
+
+# Package management
+pamac-aur
+yay
+

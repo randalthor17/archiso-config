@@ -1,26 +1,22 @@
 #!/bin/bash
 
-builddir=/tmp/build_iso_dir
+# Building on tmpfs fails due to lack of ram
+# so bye-bye fast compile times!
+
 gitdir=$PWD
-profile=$gitdir/archiso
-outdir=$profile/out
-workdir=$profile/work
-airootfs=$profile/airootfs
+configdir=$gitdir/archiso
+workdir=$configdir/work
+outdir=$configdir/out
+airootfs=$configdir/airootfs
+username=$USER
 
 build_iso(){
-    user=$(whoami)
-    if [[ -d $builddir ]]; then
-        sudo rm -rf $builddir
+    if [[ -d $workdir ]]; then
+        sudo rm -rf "$workdir"
     fi
-    sudo mkdir -p $builddir
-    sudo cp -r "$gitdir" $builddir/git
-    local outdir_old=$outdir
-    local gitdir=$builddir/git
-    local profile=$gitdir/archiso
-    local workdir=$profile/work
-    local airootfs=$profile/airootfs
-    cd $gitdir || exit
-    sudo chgrp -R root $airootfs
-    sudo mkarchiso -v -w "$workdir" -o "$outdir" -C "$gitdir/archiso/pacman.conf" $profile
+    cd "$configdir" || exit
+    sudo chgrp -R root "$airootfs"
+    sudo mkarchiso -v -w "$workdir" -o "$outdir" -C "$configdir/pacman.conf" "$configdir"
+    sudo chown -R "$username":"$username" "$airootfs"
 }
 build_iso
