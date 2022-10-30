@@ -17,6 +17,5 @@ build_iso(){
     cd "$configdir" || exit
     sudo chgrp -R root "$airootfs"
     sudo mkarchiso -v -w "$workdir" -o "$outdir" -C "$configdir/pacman.conf" "$configdir"
-    sudo chown -R "$username":"$username" "$airootfs"
 }
 build_iso

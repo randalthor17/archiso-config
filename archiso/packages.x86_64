@@ -39,8 +39,8 @@ grub
 hdparm
 hyperv
 intel-ucode
-ipw2100-fw
-ipw2200-fw
+# ipw2100-fw
+# ipw2200-fw
 irssi
 iw
 jfsutils
@@ -81,6 +81,7 @@ open-vm-tools
 openconnect
 openssh
 openvpn
+os-prober
 partclone
 parted
 partimage
@@ -123,6 +124,9 @@ wvdial
 xfsprogs
 xl2tpd
 zsh
+
+# Development packages
+base-devel
 
 # Chaotic-aur
 chaotic-keyring
@@ -201,5 +205,7 @@ neofetch
 
 # Package management
 pamac-aur
-yay
+paru
 
+# Calamares
+calamares
